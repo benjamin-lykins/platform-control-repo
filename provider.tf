@@ -8,11 +8,14 @@ terraform {
   backend "remote" {
     hostname = "app.terraform.io"
     workspaces {
-      name = "platform-control-gs"
+      name         = "platform-control-gs"
+      organization = var.organization
     }
   }
 }
 
 
 provider "tfe" {
+  hostname     = "app.terraform.io"
+  organization = var.organization
 }
