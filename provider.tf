@@ -5,7 +5,8 @@ terraform {
       version = "0.51.0"
     }
   }
-  cloud {
+  backend "cloud" {
+    hostname     = "app.terraform.io"
     organization = "ProSkub"
     workspaces {
       name = "platform-control-gs"
