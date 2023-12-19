@@ -29,5 +29,4 @@ module "workspacer" {
 
   organization   = var.organization
   workspace_name = "module-workspacer-basic-test"
-  workspace_desc = "Created by Terraform Workspacer module."
 }
