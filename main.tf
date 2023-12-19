@@ -28,12 +28,4 @@ module "workspacer" {
   workspace_name = "module-workspacer-basic-test"
   workspace_desc = "Created by Terraform Workspacer module."
   workspace_tags = ["module-ci", "test", "aws"]
-
-  envvars = {
-    AWS_ACCESS_KEY_ID = "TH1SISNOTAREAL@CCESSKEY"
-  }
-
-  envvars_sensitive = {
-    AWS_SECRET_ACCESS_KEY = "THISI$NOTAREALSECRETKEY123!@#"
-  }
 }
