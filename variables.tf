@@ -5,4 +5,5 @@ variable "organization" {
 variable "workspaces" {
   type = map(object({
   }))
+  default = {}
 }
