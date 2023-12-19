@@ -5,7 +5,7 @@ terraform {
       version = "0.51.0"
     }
   }
-  backend "cloud" {
+  backend "remote" {
     hostname     = "app.terraform.io"
     organization = "ProSkub"
     workspaces {
