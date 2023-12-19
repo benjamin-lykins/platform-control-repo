@@ -1,6 +1,10 @@
 terraform {
-  cloud {
+  backend "remote" {
+    hostname     = "app.terraform.io"
     organization = "ProSkub"
+    workspaces {
+      name = "platform-control-gs"
+    }
   }
   required_providers {
     tfe = {
