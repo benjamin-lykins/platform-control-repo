@@ -25,9 +25,11 @@ module "workspacer" {
 }
 
 resource "tfe_team" "dev-team-test" {
-  name = "dev-team-test"
+  name         = "dev-team-test"
+  organization = var.organization
 }
 
 resource "tfe_team" "release-team-test" {
-  name = "release-team-test"
+  name         = "release-team-test"
+  organization = var.organization
 }
