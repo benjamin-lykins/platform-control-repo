@@ -1,8 +1,5 @@
 terraform {
   cloud {
-    workspaces {
-      name = "platform-control-gs"
-    }
     organization = "ProSkub"
   }
   required_providers {
