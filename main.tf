@@ -1,6 +1,5 @@
 terraform {
   cloud {
-    organization = "ProSkub"
     workspaces {
       name = "platform-control-gs"
     }
