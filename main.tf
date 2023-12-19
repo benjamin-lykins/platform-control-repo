@@ -6,3 +6,4 @@ module "workspacer" {
   workspace_name = "test"
   workspace_desc = "Created by Terraform Workspacer module."
 }
+
