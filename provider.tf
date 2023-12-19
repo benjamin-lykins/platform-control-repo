@@ -6,8 +6,7 @@ terraform {
     }
   }
   backend "remote" {
-    hostname     = "app.terraform.io"
-    organization = "ProSkub"
+    hostname = "app.terraform.io"
     workspaces {
       name = "platform-control-gs"
     }
