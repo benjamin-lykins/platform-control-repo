@@ -21,7 +21,7 @@ module "workspacer" {
   #     "dev-team-test"     = "read"
   #     "release-team-test" = "write"
   #   }
-  depends_on = [tfe_team.dev-team-test, tfe_team.release-team-test]
+  #   depends_on = [tfe_team.dev-team-test, tfe_team.release-team-test]
 }
 
 # resource "tfe_team" "dev-team-test" {
