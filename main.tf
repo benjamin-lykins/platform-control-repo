@@ -1,9 +1,40 @@
+terraform {
+  required_providers {
+    tfe = {
+      source  = "hashicorp/tfe"
+      version = "0.44.1"
+    }
+  }
+  backend "remote" {
+    hostname = "app.terraform.io"
+    workspaces {
+      name = "platform-control-gs"
+    }
+  }
+}
+
+provider "tfe" {
+  hostname = "app.terraform.io"
+}
+
+variable "organization" {
+  default = "ProSkub"
+}
+
 module "workspacer" {
   source  = "alexbasista/workspacer/tfe"
   version = "0.9.0"
 
   organization   = var.organization
-  workspace_name = "test"
+  workspace_name = "module-workspacer-basic-test"
   workspace_desc = "Created by Terraform Workspacer module."
-}
+  workspace_tags = ["module-ci", "test", "aws"]
 
+  envvars = {
+    AWS_ACCESS_KEY_ID = "TH1SISNOTAREAL@CCESSKEY"
+  }
+
+  envvars_sensitive = {
+    AWS_SECRET_ACCESS_KEY = "THISI$NOTAREALSECRETKEY123!@#"
+  }
+}

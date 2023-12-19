@@ -1,4 +1,0 @@
-variable "organization" {
-  default = "ProSkub"
-}
-
