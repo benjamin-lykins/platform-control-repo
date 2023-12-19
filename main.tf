@@ -1,14 +1,14 @@
 terraform {
+  cloud {
+    organization = "ProSkub"
+    workspaces {
+      name = "platform-control-gs"
+    }
+  }
   required_providers {
     tfe = {
       source  = "hashicorp/tfe"
       version = "0.44.1"
-    }
-  }
-  backend "remote" {
-    hostname = "app.terraform.io"
-    workspaces {
-      name = "platform-control-gs"
     }
   }
 }
