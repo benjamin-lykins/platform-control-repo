@@ -3,6 +3,7 @@ terraform {
     workspaces {
       name = "platform-control-gs"
     }
+    organization = "ProSkub"
   }
   required_providers {
     tfe = {
@@ -13,7 +14,8 @@ terraform {
 }
 
 provider "tfe" {
-  hostname = "app.terraform.io"
+  hostname     = "app.terraform.io"
+  organization = var.organization
 }
 
 variable "organization" {
