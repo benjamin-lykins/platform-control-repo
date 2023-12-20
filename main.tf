@@ -30,6 +30,7 @@ module "workspacer" {
   workspace_tags = each.value.tags
   project_name   = each.value.project
   auto_apply     = each.value.auto_apply
+  force_delete   = true //only for easy cleanup in demo
 
   vcs_repo = {
     identifier     = each.value.vcs_repo.identifier
