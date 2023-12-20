@@ -29,7 +29,14 @@ module "workspacer" {
   workspace_desc = each.value.description
   workspace_tags = each.value.tags
   project_name   = each.value.project
-  depends_on     = [tfe_project.this]
+
+  vcs_repo = {
+    identifier     = each.value.vcs_repo.identifier
+    branch         = each.value.vcs_repo.branch
+    oauth_token_id = var.oauth_token_id
+  }
+
+  depends_on = [tfe_project.this]
 }
 
 resource "tfe_project" "this" {
