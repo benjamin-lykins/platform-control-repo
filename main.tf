@@ -8,12 +8,7 @@ terraform {
 }
 
 provider "tfe" {
-  hostname     = "app.terraform.io"
-  organization = var.organization
-}
-
-variable "organization" {
-  default = "ProSkub"
+  hostname = var.tfe_hostname
 }
 
 module "workspacer" {
@@ -22,4 +17,6 @@ module "workspacer" {
 
   organization   = var.organization
   workspace_name = "module-workspacer-basic-test"
+  workspace_desc = "Created by Terraform Workspacer module."
+  workspace_tags = ["module-ci", "test", "aws"]
 }
