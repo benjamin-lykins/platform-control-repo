@@ -130,4 +130,4 @@ workspaces = {
   #   }
 }
 
-projects = ["sailpoint", "linux", "windows"]
+projects = ["sailpoint", "linux"] //add windows project
