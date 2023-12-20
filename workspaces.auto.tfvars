@@ -86,48 +86,48 @@ workspaces = {
       identifier = "benjamin-lykins/demo-terraform-repo-1"
     }
   }
-  "corp-windows-prod-compute" = {
-    tags    = ["windows", "production"]
-    project = "windows"
-    vcs_repo = {
-      identifier = "benjamin-lykins/demo-terraform-repo-2"
-    }
-  }
-  "corp-windows-prod-network" = {
-    tags    = ["windows", "production"]
-    project = "windows"
-    vcs_repo = {
-      identifier = "benjamin-lykins/demo-terraform-repo-2"
-    }
-  }
-  "corp-windows-prod-storage" = {
-    tags    = ["windows", "production"]
-    project = "windows"
-    vcs_repo = {
-      identifier = "benjamin-lykins/demo-terraform-repo-2"
-    }
-  }
-  "corp-windows-dev-compute" = {
-    tags    = ["windows", "development"]
-    project = "windows"
-    vcs_repo = {
-      identifier = "benjamin-lykins/demo-terraform-repo-2"
-    }
-  }
-  "corp-windows-dev-network" = {
-    tags    = ["windows", "development"]
-    project = "windows"
-    vcs_repo = {
-      identifier = "benjamin-lykins/demo-terraform-repo-2"
-    }
-  }
-  "corp-windows-dev-storage" = {
-    tags    = ["windows", "development"]
-    project = "windows"
-    vcs_repo = {
-      identifier = "benjamin-lykins/demo-terraform-repo-2"
-    }
-  }
+  #   "corp-windows-prod-compute" = {
+  #     tags    = ["windows", "production"]
+  #     project = "windows"
+  #     vcs_repo = {
+  #       identifier = "benjamin-lykins/demo-terraform-repo-2"
+  #     }
+  #   }
+  #   "corp-windows-prod-network" = {
+  #     tags    = ["windows", "production"]
+  #     project = "windows"
+  #     vcs_repo = {
+  #       identifier = "benjamin-lykins/demo-terraform-repo-2"
+  #     }
+  #   }
+  #   "corp-windows-prod-storage" = {
+  #     tags    = ["windows", "production"]
+  #     project = "windows"
+  #     vcs_repo = {
+  #       identifier = "benjamin-lykins/demo-terraform-repo-2"
+  #     }
+  #   }
+  #   "corp-windows-dev-compute" = {
+  #     tags    = ["windows", "development"]
+  #     project = "windows"
+  #     vcs_repo = {
+  #       identifier = "benjamin-lykins/demo-terraform-repo-2"
+  #     }
+  #   }
+  #   "corp-windows-dev-network" = {
+  #     tags    = ["windows", "development"]
+  #     project = "windows"
+  #     vcs_repo = {
+  #       identifier = "benjamin-lykins/demo-terraform-repo-2"
+  #     }
+  #   }
+  #   "corp-windows-dev-storage" = {
+  #     tags    = ["windows", "development"]
+  #     project = "windows"
+  #     vcs_repo = {
+  #       identifier = "benjamin-lykins/demo-terraform-repo-2"
+  #     }
+  #   }
 }
 
 projects = ["sailpoint", "linux", "windows"]
