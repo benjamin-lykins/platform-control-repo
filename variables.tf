@@ -21,6 +21,7 @@ variable "workspaces" {
     description = optional(string, "")
     tags        = optional(list(string), [""])
     project     = optional(string, "")
+    auto_apply  = optional(bool, false)
     vcs_repo = optional(object({
       identifier     = optional(string, "")
       branch         = optional(string, "main")

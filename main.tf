@@ -29,6 +29,7 @@ module "workspacer" {
   workspace_desc = each.value.description
   workspace_tags = each.value.tags
   project_name   = each.value.project
+  auto_apply     = each.value.auto_apply
 
   vcs_repo = {
     identifier     = each.value.vcs_repo.identifier

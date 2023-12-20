@@ -1,23 +1,26 @@
 workspaces = {
   "corp-sailpoint-dev-compute" = {
-    tags    = ["sailpoint", "development"]
-    project = "sailpoint"
+    tags       = ["sailpoint", "development"]
+    project    = "sailpoint"
+    auto_apply = true
     vcs_repo = {
       identifier = "benjamin-lykins/demo-terraform-repo-2"
       branch     = "develop"
     }
   }
   "corp-sailpoint-dev-network" = {
-    tags    = ["sailpoint", "development"]
-    project = "sailpoint"
+    tags       = ["sailpoint", "development"]
+    project    = "sailpoint"
+    auto_apply = true
     vcs_repo = {
       identifier = "benjamin-lykins/demo-terraform-repo-2"
       branch     = "develop"
     }
   }
   "corp-sailpoint-dev-storage" = {
-    tags    = ["sailpoint", "development"]
-    project = "sailpoint"
+    tags       = ["sailpoint", "development"]
+    project    = "sailpoint"
+    auto_apply = true
     vcs_repo = {
       identifier = "benjamin-lykins/demo-terraform-repo-2"
       branch     = "develop"
@@ -72,24 +75,27 @@ workspaces = {
     }
   }
   "corp-linux-dev-compute" = {
-    tags    = ["linux", "development"]
-    project = "linux"
+    tags       = ["linux", "development"]
+    project    = "linux"
+    auto_apply = true
     vcs_repo = {
       identifier = "benjamin-lykins/demo-terraform-repo-1"
       branch     = "develop"
     }
   }
   "corp-linux-dev-network" = {
-    tags    = ["linux", "development"]
-    project = "linux"
+    tags       = ["linux", "development"]
+    project    = "linux"
+    auto_apply = true
     vcs_repo = {
       identifier = "benjamin-lykins/demo-terraform-repo-1"
       branch     = "develop"
     }
   }
   "corp-linux-dev-storage" = {
-    tags    = ["linux", "development"]
-    project = "linux"
+    tags       = ["linux", "development"]
+    project    = "linux"
+    auto_apply = true
     vcs_repo = {
       identifier = "benjamin-lykins/demo-terraform-repo-1"
       branch     = "develop"
@@ -120,24 +126,27 @@ workspaces = {
     }
   }
   "corp-windows-dev-compute" = {
-    tags    = ["windows", "development"]
-    project = "windows"
+    tags       = ["windows", "development"]
+    project    = "windows"
+    auto_apply = true
     vcs_repo = {
       identifier = "benjamin-lykins/demo-terraform-repo-2"
       branch     = "develop"
     }
   }
   "corp-windows-dev-network" = {
-    tags    = ["windows", "development"]
-    project = "windows"
+    tags       = ["windows", "development"]
+    project    = "windows"
+    auto_apply = true
     vcs_repo = {
       identifier = "benjamin-lykins/demo-terraform-repo-2"
       branch     = "develop"
     }
   }
   "corp-windows-dev-storage" = {
-    tags    = ["windows", "development"]
-    project = "windows"
+    tags       = ["windows", "development"]
+    project    = "windows"
+    auto_apply = true
     vcs_repo = {
       identifier = "benjamin-lykins/demo-terraform-repo-2"
       branch     = "develop"
