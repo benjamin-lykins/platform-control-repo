@@ -86,48 +86,27 @@ workspaces = {
       identifier = "benjamin-lykins/demo-terraform-repo-1"
     }
   }
-  #   "corp-shipping-prod-compute" = {
-  #     tags    = ["shipping", "production"]
-  #     project = "shipping"
-  #     vcs_repo = {
-  #       identifier = "benjamin-lykins/demo-terraform-repo-2"
-  #     }
-  #   }
-  #   "corp-shipping-prod-network" = {
-  #     tags    = ["shipping", "production"]
-  #     project = "shipping"
-  #     vcs_repo = {
-  #       identifier = "benjamin-lykins/demo-terraform-repo-2"
-  #     }
-  #   }
-  #   "corp-shipping-prod-storage" = {
-  #     tags    = ["shipping", "production"]
-  #     project = "shipping"
-  #     vcs_repo = {
-  #       identifier = "benjamin-lykins/demo-terraform-repo-2"
-  #     }
-  #   }
-  #   "corp-shipping-dev-compute" = {
-  #     tags    = ["shipping", "development"]
-  #     project = "shipping"
-  #     vcs_repo = {
-  #       identifier = "benjamin-lykins/demo-terraform-repo-2"
-  #     }
-  #   }
-  #   "corp-shipping-dev-network" = {
-  #     tags    = ["shipping", "development"]
-  #     project = "shipping"
-  #     vcs_repo = {
-  #       identifier = "benjamin-lykins/demo-terraform-repo-2"
-  #     }
-  #   }
-  #   "corp-shipping-dev-storage" = {
-  #     tags    = ["shipping", "development"]
-  #     project = "shipping"
-  #     vcs_repo = {
-  #       identifier = "benjamin-lykins/demo-terraform-repo-2"
-  #     }
-  #   }
+  "corp-shipping-dev-compute" = {
+    tags    = ["shipping", "development"]
+    project = "shipping"
+    vcs_repo = {
+      identifier = "benjamin-lykins/demo-terraform-repo-2"
+    }
+  }
+  "corp-shipping-dev-network" = {
+    tags    = ["shipping", "development"]
+    project = "shipping"
+    vcs_repo = {
+      identifier = "benjamin-lykins/demo-terraform-repo-2"
+    }
+  }
+  "corp-shipping-dev-storage" = {
+    tags    = ["shipping", "development"]
+    project = "shipping"
+    vcs_repo = {
+      identifier = "benjamin-lykins/demo-terraform-repo-2"
+    }
+  }
 }
 
-projects = ["sailpoint", "payment"] //add shipping project
+projects = ["sailpoint", "payment", "shipping"]
