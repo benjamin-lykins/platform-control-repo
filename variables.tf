@@ -13,5 +13,5 @@ variable "tfe_hostname" {
 variable "organization" {
   type        = string
   description = "Name of Organization to create Workspace in."
-  default     = "ProSkub"
+  default     = "lykins"
 }
