@@ -109,4 +109,4 @@ workspaces = {
   }
 }
 
-projects = ["sailpoint", "payment", "shipping"]
+projects = ["sailpoint", "payment", "shipping", "demo-project"]
