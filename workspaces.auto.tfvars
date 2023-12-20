@@ -1,133 +1,133 @@
 workspaces = {
-  "corp-sailpoint-dev-compute" = {
-    tags    = ["sailpoint", "development"]
+  "corp-sailpoint-dev-db" = {
+    tags    = ["sailpoint", "development", "db"]
     project = "sailpoint"
     vcs_repo = {
       identifier = "benjamin-lykins/demo-terraform-repo-2"
     }
   }
-  "corp-sailpoint-dev-network" = {
-    tags    = ["sailpoint", "development"]
-    project = "sailpoint"
-    vcs_repo = {
-      identifier = "benjamin-lykins/demo-terraform-repo-2"
-
-    }
-  }
-  "corp-sailpoint-dev-storage" = {
-    tags    = ["sailpoint", "development"]
+  "corp-sailpoint-dev-frontend" = {
+    tags    = ["sailpoint", "development", "frontend"]
     project = "sailpoint"
     vcs_repo = {
       identifier = "benjamin-lykins/demo-terraform-repo-2"
 
     }
   }
-  "corp-sailpoint-prod-compute" = {
-    tags    = ["sailpoint", "production"]
+  "corp-sailpoint-dev-backend" = {
+    tags    = ["sailpoint", "development", "backend"]
     project = "sailpoint"
     vcs_repo = {
       identifier = "benjamin-lykins/demo-terraform-repo-2"
 
     }
   }
-  "corp-sailpoint-prod-network" = {
-    tags    = ["sailpoint", "production"]
+  "corp-sailpoint-prod-db" = {
+    tags    = ["sailpoint", "production", "db"]
+    project = "sailpoint"
+    vcs_repo = {
+      identifier = "benjamin-lykins/demo-terraform-repo-2"
+
+    }
+  }
+  "corp-sailpoint-prod-frontend" = {
+    tags    = ["sailpoint", "production", "frontend"]
     project = "sailpoint"
     vcs_repo = {
       identifier = "benjamin-lykins/demo-terraform-repo-2"
     }
   }
-  "corp-sailpoint-prod-storage" = {
-    tags    = ["sailpoint", "production"]
+  "corp-sailpoint-prod-backend" = {
+    tags    = ["sailpoint", "production", "backend"]
     project = "sailpoint"
     vcs_repo = {
       identifier = "benjamin-lykins/demo-terraform-repo-2"
     }
   }
-  "corp-linux-prod-compute" = {
-    tags    = ["linux", "production"]
-    project = "linux"
+  "corp-payment-prod-compute" = {
+    tags    = ["payment", "production"]
+    project = "payment"
     vcs_repo = {
       identifier = "benjamin-lykins/demo-terraform-repo-1"
     }
   }
-  "corp-linux-prod-network" = {
-    tags    = ["linux", "production"]
-    project = "linux"
+  "corp-payment-prod-network" = {
+    tags    = ["payment", "production"]
+    project = "payment"
     vcs_repo = {
       identifier = "benjamin-lykins/demo-terraform-repo-1"
     }
   }
-  "corp-linux-prod-storage" = {
-    tags    = ["linux", "production"]
-    project = "linux"
+  "corp-payment-prod-storage" = {
+    tags    = ["payment", "production"]
+    project = "payment"
     vcs_repo = {
       identifier = "benjamin-lykins/demo-terraform-repo-1"
     }
   }
-  "corp-linux-dev-compute" = {
-    tags    = ["linux", "development"]
-    project = "linux"
+  "corp-payment-dev-compute" = {
+    tags    = ["payment", "development"]
+    project = "payment"
     vcs_repo = {
       identifier = "benjamin-lykins/demo-terraform-repo-1"
     }
   }
-  "corp-linux-dev-network" = {
-    tags    = ["linux", "development"]
-    project = "linux"
+  "corp-payment-dev-network" = {
+    tags    = ["payment", "development"]
+    project = "payment"
     vcs_repo = {
       identifier = "benjamin-lykins/demo-terraform-repo-1"
     }
   }
-  "corp-linux-dev-storage" = {
-    tags    = ["linux", "development"]
-    project = "linux"
+  "corp-payment-dev-storage" = {
+    tags    = ["payment", "development"]
+    project = "payment"
     vcs_repo = {
       identifier = "benjamin-lykins/demo-terraform-repo-1"
     }
   }
-  #   "corp-windows-prod-compute" = {
-  #     tags    = ["windows", "production"]
-  #     project = "windows"
+  #   "corp-shipping-prod-compute" = {
+  #     tags    = ["shipping", "production"]
+  #     project = "shipping"
   #     vcs_repo = {
   #       identifier = "benjamin-lykins/demo-terraform-repo-2"
   #     }
   #   }
-  #   "corp-windows-prod-network" = {
-  #     tags    = ["windows", "production"]
-  #     project = "windows"
+  #   "corp-shipping-prod-network" = {
+  #     tags    = ["shipping", "production"]
+  #     project = "shipping"
   #     vcs_repo = {
   #       identifier = "benjamin-lykins/demo-terraform-repo-2"
   #     }
   #   }
-  #   "corp-windows-prod-storage" = {
-  #     tags    = ["windows", "production"]
-  #     project = "windows"
+  #   "corp-shipping-prod-storage" = {
+  #     tags    = ["shipping", "production"]
+  #     project = "shipping"
   #     vcs_repo = {
   #       identifier = "benjamin-lykins/demo-terraform-repo-2"
   #     }
   #   }
-  #   "corp-windows-dev-compute" = {
-  #     tags    = ["windows", "development"]
-  #     project = "windows"
+  #   "corp-shipping-dev-compute" = {
+  #     tags    = ["shipping", "development"]
+  #     project = "shipping"
   #     vcs_repo = {
   #       identifier = "benjamin-lykins/demo-terraform-repo-2"
   #     }
   #   }
-  #   "corp-windows-dev-network" = {
-  #     tags    = ["windows", "development"]
-  #     project = "windows"
+  #   "corp-shipping-dev-network" = {
+  #     tags    = ["shipping", "development"]
+  #     project = "shipping"
   #     vcs_repo = {
   #       identifier = "benjamin-lykins/demo-terraform-repo-2"
   #     }
   #   }
-  #   "corp-windows-dev-storage" = {
-  #     tags    = ["windows", "development"]
-  #     project = "windows"
+  #   "corp-shipping-dev-storage" = {
+  #     tags    = ["shipping", "development"]
+  #     project = "shipping"
   #     vcs_repo = {
   #       identifier = "benjamin-lykins/demo-terraform-repo-2"
   #     }
   #   }
 }
 
-projects = ["sailpoint", "linux"] //add windows project
+projects = ["sailpoint", "payment"] //add shipping project
