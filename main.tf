@@ -29,12 +29,12 @@ module "workspacer" {
   workspace_desc = each.value.description
   workspace_tags = each.value.tags
   project_name   = each.value.project
-  auto_apply     = strcontains("${each.key}", "dev") ? true : false
+  auto_apply     = contains(["sandbox", "dev"], "${each.key}") ? true : false
   force_delete   = true //only for easy cleanup in demo
 
   vcs_repo = {
     identifier     = each.value.vcs_repo.identifier
-    branch         = strcontains("${each.key}", "dev") ? "develop" : "main"
+    branch         = contains(["sandbox", "dev"], "${each.key}") ? "develop" : "main"
     oauth_token_id = var.oauth_token_id
   }
 
