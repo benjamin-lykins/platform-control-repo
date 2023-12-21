@@ -3,32 +3,18 @@ workspaces = {
     tags    = ["common", "development"]
     project = "mono"
     vcs_repo = {
-      identifier = "benjamin-lykins/demo-terraform-repo-2"
-    }
-  }
-  "corp-mono-sandbox" = {
-    tags    = ["common", "sandbox"]
-    project = "mono"
-    vcs_repo = {
-      identifier = "benjamin-lykins/demo-terraform-repo-2"
+      identifier = "benjamin-lykins/demo-azure-mono"
     }
   }
   "corp-mono-prod" = {
     tags    = ["common", "production"]
     project = "mono"
     vcs_repo = {
-      identifier = "benjamin-lykins/demo-terraform-repo-2"
+      identifier = "benjamin-lykins/demo-azure-mono"
     }
   }
   "corp-multi-dev-vnet" = {
     tags    = ["common", "development"]
-    project = "multi"
-    vcs_repo = {
-      identifier = "benjamin-lykins/demo-terraform-repo-2"
-    }
-  }
-  "corp-multi-sandbox-vnet" = {
-    tags    = ["common", "sandbox"]
     project = "multi"
     vcs_repo = {
       identifier = "benjamin-lykins/demo-terraform-repo-2"
@@ -48,13 +34,6 @@ workspaces = {
       identifier = "benjamin-lykins/demo-terraform-repo-2"
     }
   }
-  "corp-multi-sandbox-compute" = {
-    tags    = ["common", "sandbox", "component:compute"]
-    project = "multi"
-    vcs_repo = {
-      identifier = "benjamin-lykins/demo-terraform-repo-2"
-    }
-  }
   "corp-multi-prod-compute" = {
     tags    = ["common", "production", "component:compute"]
     project = "multi"
@@ -64,4 +43,4 @@ workspaces = {
   }
 }
 
-projects = ["mono", "multi", "shared"]
+projects = ["mono", "multi"]

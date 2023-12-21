@@ -38,6 +38,10 @@ module "workspacer" {
     oauth_token_id = var.oauth_token_id
   }
 
+  tfvars = {
+    "location" = contains(["sandbox", "dev"], "${each.key}") ? "westus" : "eastus"
+  }
+
   depends_on = [tfe_project.this]
 }
 
