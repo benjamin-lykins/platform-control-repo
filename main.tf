@@ -69,7 +69,7 @@ resource "azuread_application_federated_identity_credential" "apply" {
 
   application_id = "/applications/4399ff91-c195-470d-84a7-985b251acf30"
   display_name   = "${each.key}-apply"
-  description    = "Deployments for my-repo"
+  description    = "Apply execution for ${each.key}"
   audiences      = ["api://AzureADTokenExchange"]
   issuer         = "https://app.terraform.io"
   subject        = "organization:lykins:project:${each.value.project}:workspace:${each.key}:run_phase:apply"
@@ -80,7 +80,7 @@ resource "azuread_application_federated_identity_credential" "plan" {
 
   application_id = "/applications/4399ff91-c195-470d-84a7-985b251acf30"
   display_name   = "${each.key}-plan"
-  description    = "Deployments for my-repo"
+  description    = "Plan execution for ${each.key}"
   audiences      = ["api://AzureADTokenExchange"]
   issuer         = "https://app.terraform.io"
   subject        = "organization:lykins:project:${each.value.project}:workspace:${each.key}:run_phase:plan"
