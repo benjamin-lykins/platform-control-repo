@@ -67,7 +67,7 @@ resource "tfe_project" "this" {
 resource "azuread_application_federated_identity_credential" "apply" {
   for_each = var.workspaces
 
-  application_id = "/applications/c448ccf0-7042-4c40-b05e-0c5641a9e09c"
+  application_id = "/applications/4399ff91-c195-470d-84a7-985b251acf30"
   display_name   = "${each.key}-apply"
   description    = "Deployments for my-repo"
   audiences      = ["api://AzureADTokenExchange"]
@@ -78,7 +78,7 @@ resource "azuread_application_federated_identity_credential" "apply" {
 resource "azuread_application_federated_identity_credential" "plan" {
   for_each = var.workspaces
 
-  application_id = "/applications/c448ccf0-7042-4c40-b05e-0c5641a9e09c"
+  application_id = "/applications/4399ff91-c195-470d-84a7-985b251acf30"
   display_name   = "${each.key}-plan"
   description    = "Deployments for my-repo"
   audiences      = ["api://AzureADTokenExchange"]
