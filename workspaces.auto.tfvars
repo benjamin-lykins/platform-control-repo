@@ -41,6 +41,20 @@ workspaces = {
       identifier = "benjamin-lykins/demo-azure-multi-compute"
     }
   }
+  "demo-azure-static" = {
+    tags    = ["authentication"]
+    project = "authentication"
+    vcs_repo = {
+      identifier = "benjamin-lykins/demo-azure-static"
+    }
+  }
+  "demo-azure-dynamic" = {
+    tags    = ["common"]
+    project = "authentication"
+    vcs_repo = {
+      identifier = "benjamin-lykins/demo-azure-dynamic"
+    }
+  }
 }
 
-projects = ["mono", "multi"]
+projects = ["mono", "multi", "authentication"]
