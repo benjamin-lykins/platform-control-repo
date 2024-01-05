@@ -4,6 +4,10 @@ terraform {
       source  = "hashicorp/tfe"
       version = "0.44.1"
     }
+    azuread = {
+      source  = "hashicorp/azuread"
+      version = "~> 2.0"
+    }
   }
   cloud {
     workspaces {
@@ -16,6 +20,10 @@ terraform {
 
 provider "tfe" {
   hostname = var.tfe_hostname
+}
+
+provider "azuread" {
+  tenant_id = "27662586-64fa-451e-96ef-0483c3c0a805"
 }
 
 module "workspacer" {
@@ -40,6 +48,11 @@ module "workspacer" {
 
   tfvars = {
     "location" = contains(["sandbox", "dev"], "${each.key}") ? "westus" : "eastus"
+  }
+
+  envvars = {
+    "TFC_AZURE_RUN_CLIENT_ID" = var.arm_client_id
+    "TFC_AZURE_PROVIDER_AUTH" = true
   }
 
   depends_on = [tfe_project.this]

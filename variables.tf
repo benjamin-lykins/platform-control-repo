@@ -41,3 +41,7 @@ variable "oauth_token_id" {
   type      = string
   sensitive = true
 }
+
+variable "arm_client_id" {
+  type = string
+}

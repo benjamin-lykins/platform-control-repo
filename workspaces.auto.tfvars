@@ -1,3 +1,5 @@
+arm_client_id = "c448ccf0-7042-4c40-b05e-0c5641a9e09c"
+
 workspaces = {
   "corp-mono-dev" = {
     tags    = ["common", "development"]
