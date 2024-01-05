@@ -62,5 +62,26 @@ resource "tfe_project" "this" {
   for_each     = toset(var.projects)
   name         = each.key
   organization = var.organization
+}
 
+resource "azuread_application_federated_identity_credential" "apply" {
+  for_each = var.workspaces
+
+  application_id = "c448ccf0-7042-4c40-b05e-0c5641a9e09c"
+  display_name   = "${each.key}-apply"
+  description    = "Deployments for my-repo"
+  audiences      = ["api://AzureADTokenExchange"]
+  issuer         = "https://app.terraform.io"
+  subject        = "organization:lykins:project:authentication:workspace:${each.key}:run_phase:apply"
+}
+
+resource "azuread_application_federated_identity_credential" "plan" {
+  for_each = var.workspaces
+
+  application_id = "c448ccf0-7042-4c40-b05e-0c5641a9e09c"
+  display_name   = "${each.key}-plan"
+  description    = "Deployments for my-repo"
+  audiences      = ["api://AzureADTokenExchange"]
+  issuer         = "https://app.terraform.io"
+  subject        = "organization:lykins:project:authentication:workspace:${each.key}:run_phase:plan"
 }
