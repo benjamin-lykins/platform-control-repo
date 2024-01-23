@@ -44,7 +44,7 @@ module "workspacer" {
   workspace_name = each.key
   workspace_desc = each.value.description
   workspace_tags = each.value.tags
-  project_name   = each.value.project
+  project_name   = try(each.value.project, "default")
   auto_apply     = contains(["sandbox", "nonprod"], "${each.key}") ? true : false
   force_delete   = true //only for easy cleanup in demo
 
