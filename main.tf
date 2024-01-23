@@ -22,8 +22,20 @@ provider "tfe" {
   hostname = var.tfe_hostname
 }
 
-provider "azuread" {
-  tenant_id = "27662586-64fa-451e-96ef-0483c3c0a805"
+variable "client_id" {
+  description = "The client id of the service principal"
+}
+
+variable "client_secret" {
+  description = "The client secret of the service principal"
+}
+
+variable "subscription_id" {
+  description = "The subscription id of the service principal"
+}
+
+variable "tenant_id" {
+  description = "The tenant id of the service principal"
 }
 
 module "workspacer" {
@@ -47,13 +59,18 @@ module "workspacer" {
   }
 
   tfvars = {
-    "location" = contains(["sandbox", "dev"], "${each.key}") ? "westus" : "eastus"
+    "location"        = contains(["sandbox", "dev"], "${each.key}") ? "westus" : "eastus"
+    "client_id"       = var.client_id
+    "client_secret"   = var.client_secret
+    "subscription_id" = var.subscription_id
+    "tenant_id"       = var.tenant_id
   }
 
   envvars = {
     "TFC_AZURE_RUN_CLIENT_ID" = var.arm_client_id
     "TFC_AZURE_PROVIDER_AUTH" = true
   }
+
 
   depends_on = [tfe_project.this]
 }
@@ -62,26 +79,4 @@ resource "tfe_project" "this" {
   for_each     = toset(var.projects)
   name         = each.key
   organization = var.organization
-}
-
-resource "azuread_application_federated_identity_credential" "apply" {
-  for_each = var.workspaces
-
-  application_id = "/applications/4399ff91-c195-470d-84a7-985b251acf30"
-  display_name   = "${each.key}-apply"
-  description    = "Apply execution for ${each.key}"
-  audiences      = ["api://AzureADTokenExchange"]
-  issuer         = "https://app.terraform.io"
-  subject        = "organization:lykins:project:${each.value.project}:workspace:${each.key}:run_phase:apply"
-}
-
-resource "azuread_application_federated_identity_credential" "plan" {
-  for_each = var.workspaces
-
-  application_id = "/applications/4399ff91-c195-470d-84a7-985b251acf30"
-  display_name   = "${each.key}-plan"
-  description    = "Plan execution for ${each.key}"
-  audiences      = ["api://AzureADTokenExchange"]
-  issuer         = "https://app.terraform.io"
-  subject        = "organization:lykins:project:${each.value.project}:workspace:${each.key}:run_phase:plan"
 }
