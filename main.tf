@@ -65,13 +65,6 @@ module "workspacer" {
     "subscription_id" = var.subscription_id
     "tenant_id"       = var.tenant_id
   }
-
-  envvars = {
-    "TFC_AZURE_RUN_CLIENT_ID" = var.arm_client_id
-    "TFC_AZURE_PROVIDER_AUTH" = true
-  }
-
-
   depends_on = [tfe_project.this]
 }
 
