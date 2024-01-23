@@ -45,17 +45,17 @@ module "workspacer" {
   workspace_desc = each.value.description
   workspace_tags = each.value.tags
   project_name   = each.value.project
-  auto_apply     = contains(["sandbox", "dev"], "${each.key}") ? true : false
+  auto_apply     = contains(["sandbox", "nonprod"], "${each.key}") ? true : false
   force_delete   = true //only for easy cleanup in demo
 
   vcs_repo = {
     identifier     = each.value.vcs_repo.identifier
-    branch         = contains(["sandbox", "dev"], "${each.key}") ? "develop" : "main"
+    branch         = contains(["sandbox", "nonprod"], "${each.key}") ? "nonprodelop" : "main"
     oauth_token_id = var.oauth_token_id
   }
 
   tfvars = {
-    "location"        = contains(["sandbox", "dev"], "${each.key}") ? "westus" : "eastus"
+    "location"        = contains(["sandbox", "nonprod"], "${each.key}") ? "westus" : "eastus"
     "client_id"       = var.client_id
     "client_secret"   = var.client_secret
     "subscription_id" = var.subscription_id
