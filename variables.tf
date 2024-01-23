@@ -19,8 +19,8 @@ variable "organization" {
 variable "workspaces" {
   type = map(object({
     description = optional(string, "")
-    tags        = optional(list(string), [""])
-    project     = optional(string, "")
+    tags        = optional(list(string), null)
+    project     = optional(string, "Default")
     auto_apply  = optional(bool, false)
     vcs_repo = optional(object({
       identifier     = optional(string, "")
