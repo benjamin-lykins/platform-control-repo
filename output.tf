@@ -1,3 +1,5 @@
-output "workspaces" {
-  value = module.workspacer.workspace_id
+output "projects" {
+  value = [
+    for v in tfe_project.this : v.name
+  ]
 }
