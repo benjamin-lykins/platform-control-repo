@@ -4,10 +4,6 @@ terraform {
       source  = "hashicorp/tfe"
       version = "0.44.1"
     }
-    azuread = {
-      source  = "hashicorp/azuread"
-      version = "~> 2.0"
-    }
   }
   cloud {
     workspaces {
