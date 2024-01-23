@@ -4,13 +4,14 @@ module "workspacer" {
 
   for_each = var.workspaces
 
-  organization   = var.organization
-  workspace_name = each.key
-  workspace_desc = each.value.description == "" ? null : each.value.description
-  workspace_tags = each.value.tags == "" ? null : each.value.tags
-  project_name   = each.value.project == "" ? "Default" : each.value.project
-  auto_apply     = contains(["sandbox", "nonprod"], "${each.key}") ? true : false
-  force_delete   = true //only for easy cleanup in demo
+  organization      = var.organization
+  workspace_name    = each.key
+  workspace_desc    = each.value.description == "" ? null : each.value.description
+  workspace_tags    = each.value.tags == "" ? null : each.value.tags
+  project_name      = each.value.project == "" ? "Default" : each.value.project
+  auto_apply        = contains(["sandbox", "nonprod"], "${each.key}") ? true : false
+  force_delete      = true //only for easy cleanup in demo
+  working_directory = each.value.working_directory == null ? null : each.value.working_directory
 
   vcs_repo = {
     identifier     = each.value.vcs_repo.identifier

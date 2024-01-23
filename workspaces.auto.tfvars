@@ -6,42 +6,48 @@ workspaces = {
     }
   }
   demo-application1-sandbox = {
-    tags = ["application1", "sandbox"]
+    tags              = ["application1", "sandbox"]
+    working_directory = "/application1"
     vcs_repo = {
       identifier = "benjamin-lykins/demo-azure-common"
       branch     = "sandbox"
     }
   }
   demo-application1-nonprod = {
-    tags = ["application1", "sandbox"]
+    tags              = ["application1", "sandbox"]
+    working_directory = "/application1"
     vcs_repo = {
       identifier = "benjamin-lykins/demo-azure-common"
       branch     = "nonprod"
     }
   }
   demo-application1-prod = {
-    tags = ["application1", "sandbox"]
+    tags              = ["application1", "sandbox"]
+    working_directory = "/application1"
     vcs_repo = {
       identifier = "benjamin-lykins/demo-azure-common"
       branch     = "prod"
     }
   }
   demo-application2-sandbox = {
-    tags = ["application2", "sandbox"]
+    tags              = ["application2", "sandbox"]
+    working_directory = "/application2"
     vcs_repo = {
       identifier = "benjamin-lykins/demo-azure-common"
       branch     = "sandbox"
     }
   }
   demo-application2-nonprod = {
-    tags = ["application2", "sandbox"]
+    tags              = ["application2", "sandbox"]
+    working_directory = "/application2"
     vcs_repo = {
       identifier = "benjamin-lykins/demo-azure-common"
       branch     = "nonprod"
     }
   }
   demo-application2-prod = {
-    tags = ["application2", "sandbox"]
+    tags              = ["application2", "sandbox"]
+    working_directory = "/application2"
     vcs_repo = {
       identifier = "benjamin-lykins/demo-azure-common"
       branch     = "prod"
