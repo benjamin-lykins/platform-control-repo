@@ -15,7 +15,7 @@ module "workspacer" {
 
   vcs_repo = {
     identifier     = each.value.vcs_repo.identifier
-    branch         = contains(["sandbox", "nonprod"], "${each.key}") ? "nonprodelop" : "main"
+    branch         = contains(["sandbox", "nonprod"], "${each.key}") ? "nonprod" : "main"
     oauth_token_id = var.oauth_token_id
   }
 
