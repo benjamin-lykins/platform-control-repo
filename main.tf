@@ -15,16 +15,8 @@ module "workspacer" {
 
   vcs_repo = {
     identifier     = each.value.vcs_repo.identifier
-    branch         = contains(["sandbox", "nonprod"], "${each.key}") ? "nonprod" : "main"
+    branch         = "main"
     oauth_token_id = var.oauth_token_id
-  }
-
-  tfvars = {
-    "location"        = contains(["sandbox", "nonprod"], "${each.key}") ? "westus" : "eastus"
-    "client_id"       = var.client_id
-    "client_secret"   = var.client_secret
-    "subscription_id" = var.subscription_id
-    "tenant_id"       = var.tenant_id
   }
   depends_on = [tfe_project.this]
 }
