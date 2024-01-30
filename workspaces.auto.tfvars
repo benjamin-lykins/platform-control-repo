@@ -6,7 +6,6 @@ workspaces = {
       identifier = "benjamin-lykins/demo-azure-common"
     }
   }
-
 }
 
 projects = ["corp-general", "azure-shared", "vsphere-shared"]
