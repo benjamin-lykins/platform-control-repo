@@ -9,7 +9,7 @@ module "workspacer" {
   workspace_desc    = each.value.description == "" ? null : each.value.description
   workspace_tags    = each.value.tags == "" ? null : each.value.tags
   project_name      = each.value.project == "" ? "Default" : each.value.project
-  auto_apply        = contains(["sandbox", "nonprod"], "${each.key}") ? true : false
+  auto_apply        = each.value.auto_apply
   force_delete      = true //only for easy cleanup in demo
   working_directory = each.value.working_directory == null ? null : each.value.working_directory
 
