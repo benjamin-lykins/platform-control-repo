@@ -15,6 +15,8 @@ module "workspacer" {
 
   tfvars = each.value.tfvars
 
+  envvars = each.vaule.envvars
+
   vcs_repo = {
     identifier                 = each.value.vcs_repo.identifier
     branch                     = "main"
