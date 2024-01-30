@@ -23,7 +23,7 @@ variable "workspaces" {
     project           = optional(string, "Default")
     auto_apply        = optional(bool, false)
     working_directory = optional(string, null)
-    tfvars            = optional(map(string), null)
+    tfvars            = optional(map(string), {})
     vcs_repo = optional(object({
       identifier                 = optional(string, null)
       branch                     = optional(string, "main")
