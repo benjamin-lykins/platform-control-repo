@@ -1,6 +1,6 @@
 module "workspacer" {
-  source  = "alexbasista/workspacer/tfe"
-  version = "0.9.0"
+  source  = "app.terraform.io/lykins/workspacer/tfe"
+  version = "~> 1.0"
 
   for_each = var.workspaces
 
