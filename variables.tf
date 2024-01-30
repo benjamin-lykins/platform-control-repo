@@ -41,18 +41,18 @@ variable "projects" {
 }
 
 
-variable "client_id" {
-  description = "The client id of the service principal"
-}
+# variable "client_id" {
+#   description = "The client id of the service principal"
+# }
 
-variable "client_secret" {
-  description = "The client secret of the service principal"
-}
+# variable "client_secret" {
+#   description = "The client secret of the service principal"
+# }
 
-variable "subscription_id" {
-  description = "The subscription id of the service principal"
-}
+# variable "subscription_id" {
+#   description = "The subscription id of the service principal"
+# }
 
-variable "tenant_id" {
-  description = "The tenant id of the service principal"
-}
+# variable "tenant_id" {
+#   description = "The tenant id of the service principal"
+# }
