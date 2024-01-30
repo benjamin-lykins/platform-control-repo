@@ -18,7 +18,7 @@ module "workspacer" {
   vcs_repo = {
     identifier                 = each.value.vcs_repo.identifier
     branch                     = "main"
-    github_app_installation_id = "benjamin-lykins"
+    github_app_installation_id = 46505222
   }
   depends_on = [tfe_project.this]
 }
