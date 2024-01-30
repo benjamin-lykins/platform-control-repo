@@ -13,7 +13,7 @@ variable "tfe_hostname" {
 variable "organization" {
   type        = string
   description = "Name of Organization to create Workspace in."
-  default     = "lykins-demo-org"
+  default     = "lykins"
 }
 
 variable "workspaces" {
@@ -39,20 +39,3 @@ variable "projects" {
   type    = list(string)
   default = []
 }
-
-
-# variable "client_id" {
-#   description = "The client id of the service principal"
-# }
-
-# variable "client_secret" {
-#   description = "The client secret of the service principal"
-# }
-
-# variable "subscription_id" {
-#   description = "The subscription id of the service principal"
-# }
-
-# variable "tenant_id" {
-#   description = "The tenant id of the service principal"
-# }

@@ -1,5 +1,5 @@
 module "workspacer" {
-  source  = "app.terraform.io/lykins-demo-org/workspacer/tfe"
+  source  = "app.terraform.io/lykins/workspacer/tfe"
   version = "~> 1.0"
 
   for_each = var.workspaces
