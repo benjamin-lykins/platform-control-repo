@@ -13,14 +13,14 @@ variable "tfe_hostname" {
 variable "organization" {
   type        = string
   description = "Name of Organization to create Workspace in."
-  default     = "RPTData"
+  default     = "lykins-demo-org"
 }
 
 variable "workspaces" {
   type = map(object({
     description       = optional(string, "Managed by Platform-Control-Repo")
     tags              = optional(list(string), null)
-    project           = optional(string, "Default")
+    project           = optional(string, "Default Project")
     auto_apply        = optional(bool, false)
     working_directory = optional(string, null)
     tfvars            = optional(map(string), {})
