@@ -18,16 +18,18 @@ variable "organization" {
 
 variable "workspaces" {
   type = map(object({
-    description       = optional(string, "")
+    description       = optional(string, "Managed by Platform-Control-Repo")
     tags              = optional(list(string), null)
     project           = optional(string, "Default")
     auto_apply        = optional(bool, false)
     working_directory = optional(string, null)
+    tfvars            = optional(map(string), null)
     vcs_repo = optional(object({
-      identifier     = optional(string, "")
-      branch         = optional(string, "main")
-      oauth_token_id = optional(string, "")
-      tags_regex     = optional(string, null)
+      identifier                 = optional(string, null)
+      branch                     = optional(string, "main")
+      oauth_token_id             = optional(string, null)
+      github_app_installation_id = optional(string, null)
+      tags_regex                 = optional(string, null)
     }))
   }))
   default = {}

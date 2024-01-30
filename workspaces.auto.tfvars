@@ -9,4 +9,4 @@ workspaces = {
 
 }
 
-projects = ["application1", "application2"]
+projects = ["corp-general", "azure-shared", "vsphere-shared"]

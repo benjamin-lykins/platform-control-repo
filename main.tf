@@ -13,10 +13,12 @@ module "workspacer" {
   force_delete      = true //only for easy cleanup in demo
   working_directory = each.value.working_directory == null ? null : each.value.working_directory
 
+  tfvars = each.value.tfvars
+
   vcs_repo = {
-    identifier     = each.value.vcs_repo.identifier
-    branch         = "main"
-    oauth_token_id = var.oauth_token_id
+    identifier                 = each.value.vcs_repo.identifier
+    branch                     = "main"
+    github_app_installation_id = "benjamin-lykins"
   }
   depends_on = [tfe_project.this]
 }
