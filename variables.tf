@@ -40,11 +40,6 @@ variable "projects" {
   default = []
 }
 
-variable "oauth_token_id" {
-  type      = string
-  sensitive = true
-}
-
 
 variable "client_id" {
   description = "The client id of the service principal"

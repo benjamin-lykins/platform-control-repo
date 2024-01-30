@@ -7,7 +7,7 @@ terraform {
   }
   cloud {
     workspaces {
-      name = "platform-control-gs"
+      name = "platform-control-ws"
     }
     hostname     = "app.terraform.io"
     organization = "lykins"
