@@ -11,6 +11,6 @@ workspaces = {
 projects = [
   "new",
   "old",
-  "1",
-  "2"
+  "123",
+  "234"
 ]
