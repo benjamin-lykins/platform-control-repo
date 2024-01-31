@@ -11,7 +11,7 @@ module "workspacer" {
   project_name      = each.value.project == "" ? "Default" : each.value.project
   auto_apply        = each.value.auto_apply
   force_delete      = true //only for easy cleanup in demo
-  working_directory = each.value.working_directory == null ? n∂ull : each.value.working_directory
+  working_directory = each.value.working_directory == null ? null : each.value.working_directory
 
   tfvars = each.value.tfvars
 
