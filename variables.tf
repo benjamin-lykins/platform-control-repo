@@ -36,7 +36,12 @@ variable "workspaces" {
   default = {}
 }
 
-variable "projects" {
+variable "azure-projects" {
+  type    = list(string)
+  default = []
+}
+
+variable "vsphere-projects" {
   type    = list(string)
   default = []
 }

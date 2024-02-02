@@ -60,3 +60,11 @@ resource "tfe_variable_set" "vsphere_ctc_prod" {
   description  = "TJX vSphere CTC Prod Variable Set."
   organization = var.organization
 }
+
+
+resource "tfe_project_variable_set" "global_azure" {
+  for_each = toset(var.azure-projects)
+
+  variable_set_id = tfe_variable_set.global_azure.id
+  project_id      = tfe_project.this[each.key].id
+}

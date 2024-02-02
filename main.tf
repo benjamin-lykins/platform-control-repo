@@ -26,7 +26,7 @@ module "workspacer" {
 }
 
 resource "tfe_project" "this" {
-  for_each     = toset(var.projects)
+  for_each     = toset(merge(var.azure-projects, var.vsphere-projects))
   name         = each.key
   organization = var.organization
 }

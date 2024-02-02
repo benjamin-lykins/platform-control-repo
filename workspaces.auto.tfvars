@@ -1,7 +1,7 @@
 workspaces = {
 }
 
-projects = [
+azure-projects = [
   "new",
   "old",
   "123",

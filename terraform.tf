@@ -10,7 +10,7 @@ terraform {
       name = "platform-control-ws"
     }
     hostname     = "app.terraform.io"
-    organization = "lykins"
+    organization = "lykins-demo-org"
   }
 }
 
